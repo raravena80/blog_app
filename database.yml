@@ -7,5 +7,4 @@ test:
   database: /root/blog_app_test.sqlite
 
 production:
-  dialect: "sqlite3"
-  database: /root/blog_app_production.sqlite
+  url: {{envOr "DATABASE_URL" "mysql://blog_app:blog_app@mysql-0.mysql/blog_app_production"}}
