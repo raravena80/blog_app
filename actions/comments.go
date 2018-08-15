@@ -2,10 +2,10 @@ package actions
 
 import (
 	"github.com/gobuffalo/buffalo"
-	"github.com/markbates/pop"
+	"github.com/gobuffalo/pop"
 	"github.com/raravena80/blog_app/models"
 	"github.com/pkg/errors"
-	uuid "github.com/satori/go.uuid"
+	uuid "github.com/gobuffalo/uuid"
 )
 
 // CommentsCreatePost adds the comment to the db.
