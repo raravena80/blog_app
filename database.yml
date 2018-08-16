@@ -1,6 +1,9 @@
 development:
-  dialect: "sqlite3"
-  database: /root/blog_app_development.sqlite
+  dialect: "mysql"
+  database: {{ envOr "DBNAME" "blog_app" }}
+  host: {{ envOr "DBHOST" "mysql-0.mysql" }}
+  user: {{ envOr "DBUSER" "blog_app" }}
+  password: {{ envOr "DBPASSWORD" "blog_app" }}
 
 test:
   dialect: "sqlite3"
