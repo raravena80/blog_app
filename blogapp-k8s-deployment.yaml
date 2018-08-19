@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: blogapp-deployment
+  labels:
+    app: blogapp
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: blogapp
+  template:
+    metadata:
+      labels:
+        app: blogapp
+    spec:
+      containers:
+      - name: blogapp
+        image: raravena80/blogapp:latest
+        ports:
+        - containerPort: 3000
+        env:
+        - name: HOST
+          value: "0.0.0.0"
+        - name: ADDR
+          value: "0.0.0.0"
+        - name: PORT
+          value: "3000"
