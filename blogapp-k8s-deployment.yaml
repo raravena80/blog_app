@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: blogapp
-        image: raravena80/blogapp:latest
+        image: raravena80/blogapp:0.0.3
         ports:
         - containerPort: 3000
         env:
